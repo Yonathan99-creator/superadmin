@@ -1,11 +1,11 @@
 import React from 'react';
 import { ThemeProvider } from './contexts/ThemeContext';
-import LandingPage from './components/landing/LandingPage';
+import MainApp from './components/MainApp';
 
 function App() {
   return (
     <ThemeProvider>
-      <LandingPage />
+      <MainApp />
     </ThemeProvider>
   );
 }

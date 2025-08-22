@@ -7,13 +7,17 @@ import {
 } from 'lucide-react';
 import { useTheme } from '../../contexts/ThemeContext';
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  activeModule: string;
+  onModuleChange: (module: string) => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ activeModule, onModuleChange }) => {
   const { theme, toggleTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isNotificationOpen, setIsNotificationOpen] = useState(false);
-  const [activeModule, setActiveModule] = useState('Home');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,7 +50,7 @@ const Navbar: React.FC = () => {
   const unreadCount = notifications.filter(n => n.unread).length;
 
   const handleModuleChange = (moduleName: string) => {
-    setActiveModule(moduleName);
+    onModuleChange(moduleName);
     setIsMobileMenuOpen(false);
   };
 
