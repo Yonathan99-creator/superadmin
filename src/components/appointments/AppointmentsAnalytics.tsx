@@ -3,7 +3,7 @@ import {
   TrendingUp, Calendar, Users, DollarSign, 
   Clock, Star, Activity, BarChart3,
   PieChart, LineChart, Download, Filter,
-  ArrowUp, ArrowDown, Eye, RefreshCw
+  ArrowUp, ArrowDown, Eye, RefreshCw, CheckCircle, AlertTriangle
 } from 'lucide-react';
 
 const AppointmentsAnalytics: React.FC = () => {
