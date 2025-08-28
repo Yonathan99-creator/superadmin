@@ -81,8 +81,8 @@ const Navbar: React.FC<NavbarProps> = ({ activeModule, onModuleChange }) => {
           </div>
 
           {/* Navigation Items - Hidden on mobile */}
-          <div className="hidden lg:block flex-1 mx-4">
-            <div className="flex items-center justify-center space-x-1 overflow-x-auto scrollbar-hide">
+          <div className="hidden lg:block flex-1 mx-8">
+            <div className="flex items-center justify-center space-x-2">
               {navigationItems.map((item, index) => {
                 const Icon = item.icon;
                 const isActive = activeModule === item.name;
@@ -91,15 +91,15 @@ const Navbar: React.FC<NavbarProps> = ({ activeModule, onModuleChange }) => {
                   <button
                     key={item.name}
                     onClick={() => handleModuleChange(item.name)}
-                    className={`relative px-2 py-2 rounded-lg text-xs font-medium transition-all duration-300 hover:bg-white/60 dark:hover:bg-gray-800/60 hover:shadow-lg hover:scale-105 group whitespace-nowrap flex-shrink-0 ${
+                    className={`relative px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-white/60 dark:hover:bg-gray-800/60 hover:shadow-lg hover:scale-105 group whitespace-nowrap flex items-center space-x-2 ${
                       isActive
                         ? 'text-blue-600 dark:text-blue-400 bg-white/60 dark:bg-gray-800/60 shadow-md'
                         : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
                     }`}
                     style={{ animationDelay: `${index * 50}ms` }}
                   >
-                    <Icon className="h-4 w-4 inline mr-1 group-hover:scale-110 transition-transform duration-300" />
-                    <span className="hidden 2xl:inline text-xs">{item.name}</span>
+                    <Icon className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" />
+                    <span className="text-sm">{item.name}</span>
                     {/* Active indicator */}
                     {isActive && (
                       <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full"></div>

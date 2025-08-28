@@ -3,6 +3,7 @@ import Navbar from './shared/Navbar';
 import LandingPage from './landing/LandingPage';
 import ProfessionalsPage from './professionals/ProfessionalsPage';
 import AppointmentsPage from './appointments/AppointmentsPage';
+import ServicesPage from './services/ServicesPage';
 import Footer from './landing/Footer';
 
 const MainApp: React.FC = () => {
@@ -14,6 +15,8 @@ const MainApp: React.FC = () => {
         return <ProfessionalsPage />;
       case 'Appointments':
         return <AppointmentsPage />;
+      case 'Services':
+        return <ServicesPage />;
       case 'Home':
       default:
         return (
