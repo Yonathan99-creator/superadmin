@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from './shared/Navbar';
 import LandingPage from './landing/LandingPage';
 import ProfessionalsPage from './professionals/ProfessionalsPage';
+import AppointmentsPage from './appointments/AppointmentsPage';
 import Footer from './landing/Footer';
 
 const MainApp: React.FC = () => {
@@ -11,6 +12,8 @@ const MainApp: React.FC = () => {
     switch (activeModule) {
       case 'Professionals':
         return <ProfessionalsPage />;
+      case 'Appointments':
+        return <AppointmentsPage />;
       case 'Home':
       default:
         return (
