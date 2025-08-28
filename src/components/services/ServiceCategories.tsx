@@ -1,8 +1,5 @@
 import React from 'react';
-import { 
-  Stethoscope, Brain, Heart, Tooth, Eye, 
-  Activity, Shield, Zap, Plus, TrendingUp
-} from 'lucide-react';
+import { Stethoscope, Brain, Heart, Bluetooth as Tooth, Eye, Activity, Shield, Zap, Plus, TrendingUp } from 'lucide-react';
 
 interface ServiceCategoriesProps {
   selectedCategory: string;
