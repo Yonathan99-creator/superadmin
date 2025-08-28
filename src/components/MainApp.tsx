@@ -4,6 +4,7 @@ import LandingPage from './landing/LandingPage';
 import ProfessionalsPage from './professionals/ProfessionalsPage';
 import AppointmentsPage from './appointments/AppointmentsPage';
 import ServicesPage from './services/ServicesPage';
+import SubscriptionsPage from './subscriptions/SubscriptionsPage';
 import Footer from './landing/Footer';
 
 const MainApp: React.FC = () => {
@@ -17,6 +18,8 @@ const MainApp: React.FC = () => {
         return <AppointmentsPage />;
       case 'Services':
         return <ServicesPage />;
+      case 'Subscriptions':
+        return <SubscriptionsPage />;
       case 'Home':
       default:
         return (

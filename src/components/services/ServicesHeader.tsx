@@ -73,7 +73,7 @@ const ServicesHeader: React.FC<ServicesHeaderProps> = ({ activeTab, onTabChange 
 
       {/* Navigation Tabs */}
       <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 p-2">
-        <div className="flex space-x-1 overflow-x-auto">
+        <div className="flex space-x-1">
           {tabs.map((tab, index) => {
             const Icon = tab.icon;
             const isActive = activeTab === tab.id;

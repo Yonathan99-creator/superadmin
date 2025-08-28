@@ -33,7 +33,6 @@ const Navbar: React.FC<NavbarProps> = ({ activeModule, onModuleChange }) => {
     { name: 'Professionals', icon: Users, href: '#professionals' },
     { name: 'Appointments', icon: Calendar, href: '#appointments' },
     { name: 'Services', icon: Settings, href: '#services' },
-    { name: 'Subscriptions', icon: CreditCard, href: '#subscriptions' },
     { name: 'Reports', icon: BarChart3, href: '#reports' },
     { name: 'Logs', icon: FileText, href: '#logs' },
     { name: 'Clients', icon: UserCheck, href: '#clients' },
@@ -98,8 +97,8 @@ const Navbar: React.FC<NavbarProps> = ({ activeModule, onModuleChange }) => {
                     }`}
                     style={{ animationDelay: `${index * 50}ms` }}
                   >
-                    <Icon className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" />
-                    <span className="text-sm">{item.name}</span>
+                    <Icon className="h-3 w-3 group-hover:scale-110 transition-transform duration-300" />
+                    <span className="text-xs">{item.name}</span>
                     {/* Active indicator */}
                     {isActive && (
                       <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full"></div>
