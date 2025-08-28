@@ -81,8 +81,8 @@ const Navbar: React.FC<NavbarProps> = ({ activeModule, onModuleChange }) => {
           </div>
 
           {/* Navigation Items - Hidden on mobile */}
-          <div className="hidden lg:block flex-1 max-w-6xl mx-8">
-            <div className="flex items-center justify-center space-x-1">
+          <div className="hidden lg:block flex-1 mx-4">
+            <div className="flex items-center justify-center space-x-1 overflow-x-auto scrollbar-hide">
               {navigationItems.map((item, index) => {
                 const Icon = item.icon;
                 const isActive = activeModule === item.name;
@@ -91,15 +91,15 @@ const Navbar: React.FC<NavbarProps> = ({ activeModule, onModuleChange }) => {
                   <button
                     key={item.name}
                     onClick={() => handleModuleChange(item.name)}
-                    className={`relative px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-white/60 dark:hover:bg-gray-800/60 hover:shadow-lg hover:scale-105 group whitespace-nowrap ${
+                    className={`relative px-2 py-2 rounded-lg text-xs font-medium transition-all duration-300 hover:bg-white/60 dark:hover:bg-gray-800/60 hover:shadow-lg hover:scale-105 group whitespace-nowrap flex-shrink-0 ${
                       isActive
                         ? 'text-blue-600 dark:text-blue-400 bg-white/60 dark:bg-gray-800/60 shadow-md'
                         : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
                     }`}
                     style={{ animationDelay: `${index * 50}ms` }}
                   >
-                    <Icon className="h-4 w-4 inline mr-2 group-hover:scale-110 transition-transform duration-300" />
-                    <span className="hidden xl:inline">{item.name}</span>
+                    <Icon className="h-4 w-4 inline mr-1 group-hover:scale-110 transition-transform duration-300" />
+                    <span className="hidden 2xl:inline text-xs">{item.name}</span>
                     {/* Active indicator */}
                     {isActive && (
                       <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full"></div>
@@ -111,11 +111,11 @@ const Navbar: React.FC<NavbarProps> = ({ activeModule, onModuleChange }) => {
           </div>
 
           {/* Right Side Actions */}
-          <div className="flex items-center space-x-2 flex-shrink-0">
+          <div className="flex items-center space-x-1 flex-shrink-0">
             {/* Search Button */}
-            <button className="hidden lg:flex items-center space-x-2 px-3 py-2 bg-gray-100/80 dark:bg-gray-800/80 hover:bg-white dark:hover:bg-gray-700 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-md group backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50">
+            <button className="hidden xl:flex items-center space-x-2 px-2 py-2 bg-gray-100/80 dark:bg-gray-800/80 hover:bg-white dark:hover:bg-gray-700 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-md group backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50">
               <Search className="h-4 w-4 text-gray-600 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors group-hover:rotate-12 duration-300" />
-              <span className="text-sm text-gray-600 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors hidden xl:inline">Search</span>
+              <span className="text-xs text-gray-600 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors hidden 2xl:inline">Search</span>
             </button>
 
             {/* Notifications */}
@@ -186,18 +186,18 @@ const Navbar: React.FC<NavbarProps> = ({ activeModule, onModuleChange }) => {
             <div className="relative">
               <button
                 onClick={() => setIsProfileOpen(!isProfileOpen)}
-                className="flex items-center space-x-2 p-1 rounded-xl hover:bg-white/60 dark:hover:bg-gray-800/60 transition-all duration-300 hover:scale-105 hover:shadow-md group border border-transparent hover:border-gray-200/50 dark:hover:border-gray-700/50"
+                className="flex items-center space-x-1 p-1 rounded-xl hover:bg-white/60 dark:hover:bg-gray-800/60 transition-all duration-300 hover:scale-105 hover:shadow-md group border border-transparent hover:border-gray-200/50 dark:hover:border-gray-700/50"
               >
                 <img
                   src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&dpr=1"
                   alt="Profile"
-                  className="w-8 h-8 rounded-full ring-2 ring-white dark:ring-gray-700 group-hover:ring-blue-400 transition-all duration-300"
+                  className="w-7 h-7 rounded-full ring-2 ring-white dark:ring-gray-700 group-hover:ring-blue-400 transition-all duration-300"
                 />
-                <div className="hidden sm:block text-left">
-                  <p className="text-sm font-medium text-gray-900 dark:text-white">Admin User</p>
+                <div className="hidden lg:block text-left">
+                  <p className="text-xs font-medium text-gray-900 dark:text-white">Admin User</p>
                   <p className="text-xs text-gray-500 dark:text-gray-400">SuperAdmin</p>
                 </div>
-                <ChevronDown className={`h-4 w-4 text-gray-600 dark:text-gray-300 transition-transform duration-300 ${isProfileOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`h-3 w-3 text-gray-600 dark:text-gray-300 transition-transform duration-300 ${isProfileOpen ? 'rotate-180' : ''} hidden lg:block`} />
               </button>
 
               {/* Profile Dropdown Menu */}
