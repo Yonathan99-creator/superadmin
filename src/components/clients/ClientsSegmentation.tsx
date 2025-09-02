@@ -3,7 +3,7 @@ import {
   Target, Users, TrendingUp, DollarSign, 
   Star, Clock, Award, Activity, Plus,
   Edit, Trash2, Eye, Filter, Search,
-  MapPin, Calendar, Heart, Zap, Shield
+  MapPin, Calendar, Heart, Zap, Shield, X
 } from 'lucide-react';
 
 interface Segment {
