@@ -33,9 +33,9 @@ const Navbar: React.FC<NavbarProps> = ({ activeModule, onModuleChange }) => {
     { name: 'Professionals', icon: Users, href: '#professionals' },
     { name: 'Appointments', icon: Calendar, href: '#appointments' },
     { name: 'Services', icon: Settings, href: '#services' },
+    { name: 'Clients', icon: UserCheck, href: '#clients' },
     { name: 'Reports', icon: FileText, href: '#reports' },
     { name: 'Subscriptions', icon: BarChart3, href: '#subscriptions' },
-    { name: 'Clients', icon: UserCheck, href: '#clients' },
     { name: 'Reviews', icon: Star, href: '#reviews' },
   ];
 
